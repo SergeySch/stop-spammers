@@ -32,7 +32,7 @@ $sw=false;
 $container='wlreq';
 if($sw) {
 $nwlrequests[$key]=$value;
-$emailParam=htmlspecialchars(addslashes($value[4])); //todo:collect all emails per IP and notify them when whitelisted
+$emailParam=htmlspecialchars(addslashes($value[1])); //todo:collect all emails per IP and notify them when whitelisted
 $show.="<tr style=\"background-color:white\">";
 $trsh="<a href=\"\" onclick=\"sfs_ajax_process('$key','wlreq','delete_wl_row','$ajaxurl');return false;\" title=\"Delete row\" alt=\"Delete row\" ><img src=\"$trash\" height=\"16px\" /></a>";
 $addtodeny="<a href=\"\"onclick=\"sfs_ajax_process('$value[0]','$container','add_black','$ajaxurl');return false;\" title=\"Add $value[0] to Deny List\" alt=\"Add $value[0] to Deny List\" ><img src=\"$tdown\" height=\"16px\" /></a>";
